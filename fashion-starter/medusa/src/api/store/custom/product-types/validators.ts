@@ -23,9 +23,9 @@ export const AdminGetProductTypesParams = createFindParams({
     value: z.union([z.string(), z.array(z.string())]).optional(),
     // TODO: To be added in next iteration
     // discount_condition_id: z.string().nullish(),
-    created_at: createOperatorMap().optional(),
-    updated_at: createOperatorMap().optional(),
-    deleted_at: createOperatorMap().optional(),
+    created_at: createOperatorMap().optional() as any,
+    updated_at: createOperatorMap().optional() as any,
+    deleted_at: createOperatorMap().optional() as any,
     $and: z.lazy(() => AdminGetProductTypesParams.array()).optional(),
     $or: z.lazy(() => AdminGetProductTypesParams.array()).optional(),
   }),
