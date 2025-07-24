@@ -26,7 +26,5 @@ export const AdminGetProductTypesParams = createFindParams({
     created_at: createOperatorMap().optional() as any,
     updated_at: createOperatorMap().optional() as any,
     deleted_at: createOperatorMap().optional() as any,
-    $and: z.lazy(() => z.array(AdminGetProductTypesParams)).optional(),
-    $or: z.lazy(() => z.array(AdminGetProductTypesParams)).optional(),
   }),
 );
